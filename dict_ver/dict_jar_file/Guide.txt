@@ -1,0 +1,2 @@
+Type in cmd : "java -jar Dict.jar"
+or double click on Run.bat

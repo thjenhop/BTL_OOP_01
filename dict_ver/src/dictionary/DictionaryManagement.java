@@ -129,10 +129,8 @@ public class DictionaryManagement {
 				dict.data.get(i).setWord_explain(explain);
 				return;
 			}
-			else {
-				System.out.println("Not found");
-			}
 		}
+		System.out.println("Not found");
 
 	}
 	
@@ -146,10 +144,8 @@ public class DictionaryManagement {
 				input.close();
 				return;
 			}
-			else {
-				System.out.println("Not found!");
-			}
 		}
+		System.out.println("Not found!");
 
 	}
 	
