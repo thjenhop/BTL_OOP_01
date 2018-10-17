@@ -15,6 +15,7 @@ public class Dictionary {
 		data.add(newWord);	
 	}
 	
+	
 	public void addWord(String target,String pronoun, String meaning) {
 		Word newWord = new Word(target,pronoun, meaning);
 		data.add(newWord);	

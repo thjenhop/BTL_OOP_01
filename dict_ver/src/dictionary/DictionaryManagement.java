@@ -38,10 +38,10 @@ public class DictionaryManagement {
 		input.nextLine();
 		for( int i = 0; i< numWord; i++) {
 			System.out.println("No "+ (i+1) );
-			System.out.print("Word : ");
+			System.out.print("Word: ");
 			String target = input.nextLine().toLowerCase();
 			
-			System.out.print("its explain : ");
+			System.out.print("Its explain: ");
 			String explain = input.nextLine().toLowerCase();
 			dict.addWord(target, explain);
 		}
@@ -79,7 +79,7 @@ public class DictionaryManagement {
 
 		}
 		dict.data.add(newWord);
-		System.out.println("done!");	
+		System.out.println("Done!");	
 		
 	}
 	
@@ -94,20 +94,20 @@ public class DictionaryManagement {
 				return;
 			}
 		}
-		System.out.println("not found!");
+		System.out.println("Not found!");
 	}
 	
 	public void addData() {
 		insertArrayWord_target();
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a word : ");
+		System.out.print("Enter a word: ");
 		
 		String target = input.nextLine().toLowerCase();
 		if( dict.data_word_target.contains(target) ) {
-			System.out.println("that word exists !");
+			System.out.println("That word exists !");
 		}
 		else {
-			System.out.print("Enter its explain : ");
+			System.out.print("Enter its explain: ");
 			String explain = input.nextLine().toLowerCase();
 			dict.addWord(target, explain);
 		}
@@ -117,14 +117,14 @@ public class DictionaryManagement {
 	public void insertData() {
 		insertArrayWord_target();
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter a word : ");
+		System.out.print("Enter a word: ");
 		String target = input.nextLine().toLowerCase();
 		for ( int i = 0; i< dict.data.size();i++) {
 			if(dict.data.get(i).getWord_target().equals(target)) {
-				System.out.print("Enter its pronounciation :");
+				System.out.print("Enter its pronounciation: ");
 				String pronoun = input.nextLine().toLowerCase();
 				dict.data.get(i).setWord_pronoun(pronoun);
-				System.out.print("enter its explain : ");
+				System.out.print("Enter its explain: ");
 				String explain = input.nextLine().toLowerCase();
 				dict.data.get(i).setWord_explain(explain);
 				return;
@@ -135,7 +135,7 @@ public class DictionaryManagement {
 	}
 	
 	public void deleteData() {
-		System.out.print("Enter a word : ");
+		System.out.print("Enter a word: ");
 		Scanner input = new Scanner(System.in);
 		String target = input.nextLine().toLowerCase();
 		for( int i = 0; i< dict.data.size();i++) {
