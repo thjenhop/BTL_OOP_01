@@ -16,7 +16,7 @@ public class DictionaryCommandLine {
 			case 1: dictionaryBasic();break;
 			case 2: {
 				dictionaryAdvanced();
-				System.out.print("Do you Do you want export current data to file (y/n):");
+				System.out.print("Do you want to export current data to file (y/n):");
 				String x = input.next();
 				if(x.equals("y")) manager.exportToFile();
 			};break;
@@ -48,7 +48,7 @@ public class DictionaryCommandLine {
 				case 1: manager.insertFromCommandLine();break;
 				case 2: showAllWord_basic();break;
 			}
-			System.out.print("Do you want contine?(1_y/2_n) : ");
+			System.out.print("Do you want to contine?(1_y/2_n) : ");
 			choise= input.next();
 		}while ( choise.equals("1")|| choise.equals("y"));
 	}
@@ -93,7 +93,7 @@ public class DictionaryCommandLine {
 					}
 				}break;
 			}
-			System.out.print("Do you want contine?(1_y/2_n) : ");
+			System.out.print("Do you want to contine?(1_y/2_n) : ");
 			choise= input.next();
 		}while ( choise.equals("1")|| choise.equals("y"));
 	}
@@ -102,7 +102,7 @@ public class DictionaryCommandLine {
 		boolean _continue = true;
 		Scanner input = new Scanner(System.in);
 		do {
-			System.out.print("Enter a word you want search: ");
+			System.out.print("Enter a word you want to search: ");
 			String x = input.nextLine().toLowerCase();
 			for ( int i = 0; i< manager.dict.data.size(); i++) {
 				if ( manager.dict.data.get(i).word_target.length() >= x.length()) { // do dai target >= do dai tu can tim
@@ -112,11 +112,11 @@ public class DictionaryCommandLine {
 					}
 				}
 			}
-			System.out.print("Do you want contine? (1_y/2_n) : ");
+			System.out.print("Do you want to contine? (1_y/2_n) : ");
 			char y = input.nextLine().charAt(0);
 			if( y == 'n' || y == '2') _continue = false;
 		}while(_continue);
-		System.out.print("Do you want translate (1_y/2_n) : ");
+		System.out.print("Do you want to translate (1_y/2_n) : ");
 		String z = input.next();
 		if( z.equals("1") || z.equals("y") ) manager.dictionaryLookup();
 	}
